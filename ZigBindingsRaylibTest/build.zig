@@ -7,6 +7,7 @@ pub fn build(b: *std.Build) void {
     const raylib_dep = b.dependency("raylib_zig", .{
         .target = target,
         .optimize = optimize,
+        .shared = true,
     });
     
     const raylib = raylib_dep.module("raylib"); // main raylib module

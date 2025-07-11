@@ -15,14 +15,16 @@ pub fn build(b: *std.Build) void {
         .root_module = exe_mod,
     });
     
+    // exe.addSystemFrameworkPath(b.path("sdk/mac.sdk/System/Library/Frameworks/"));
+    
     const raylib_dep = b.dependency("raylib", .{
         .target = target,
         .optimize = optimize,
+        .shared = true,
     });
     
     const raylib_artifact = raylib_dep.artifact("raylib"); // raylib C library
     exe.linkLibrary(raylib_artifact);
-
     b.installArtifact(exe);
     
     b.installDirectory(.{

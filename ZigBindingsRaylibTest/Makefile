@@ -1,6 +1,6 @@
 #--SETTINGS--
 
-#Some options: native, windows, linux, macos, windows-gnu, linux-gnu
+#Some options: native, windows, macos, linux-gnu
 PLATFORM ?= native
 
 #Some options: native, x86_64, i386, aarm64
