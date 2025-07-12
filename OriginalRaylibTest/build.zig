@@ -20,7 +20,6 @@ pub fn build(b: *std.Build) void {
     const raylib_dep = b.dependency("raylib", .{
         .target = target,
         .optimize = optimize,
-        .shared = true,
     });
     
     const raylib_artifact = raylib_dep.artifact("raylib"); // raylib C library
