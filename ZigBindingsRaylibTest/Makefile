@@ -28,15 +28,16 @@ ifeq ($(RUN), true)
 endif
 
 ifeq ($(PLATFORM), linux-gnu)
-	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM).$(LINUX_GLIBC_VERSION) --search-prefix $(SEARCH_PREFIX)
+	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM).$(LINUX_GLIBC_VERSION) --search-prefix $(SEARCH_PREFIX) -p zig-out/$(PLATFORM)
 else ifeq ($(PLATFORM), macos)
-	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM) -Dmacos-sdk-path=$(MAC_SDK_PATH) --search-prefix $(SEARCH_PREFIX) 
+	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM) -Dmacos-sdk-path=$(MAC_SDK_PATH) --search-prefix $(SEARCH_PREFIX) -p zig-out/$(PLATFORM)
 else
-	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM)
+	FLAGS += -Dtarget=$(ARCH)-$(PLATFORM) -p zig-out/$(PLATFORM)
 endif
 
 build:
 	zig build $(FLAGS)
+	
 clean:
 	rm -rf zig-out
 
