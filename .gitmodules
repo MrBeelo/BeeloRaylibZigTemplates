@@ -1,6 +1,6 @@
 [submodule "OriginalRaylibTest/raylib"]
 	path = OriginalRaylibTest/raylib
-	url = https://github.com/raysan5/raylib
+	url = https://github.com/raysan5/raylib.git
 [submodule "ZigBindingsRaylibTest/raylib-zig"]
 	path = ZigBindingsRaylibTest/raylib-zig
 	url = https://github.com/Not-Nik/raylib-zig
