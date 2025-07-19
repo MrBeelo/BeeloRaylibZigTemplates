@@ -1,9 +1,9 @@
 #--SETTINGS--
 
-#Some options: native, windows, macos, linux-gnu
+#Platform to build for. Some options: native, windows, macos, linux-gnu
 PLATFORM ?= native
 
-#Some options: native, x86_64, i386, aarm64
+#Architecture to build for. Some options: native, x86_64, i386, aarm64
 ARCH ?= native
 
 #Run the project immediately after export?
