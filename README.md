@@ -1,4 +1,5 @@
 2 Raylib Templates that use Zig.
+To clone: git clone --recurse-submodules https://github.com/MrBeelo/BeeloRaylibZigTemplates.git
 
 The first one uses the actual C version of raylib while the second one uses the zig bindings.
 
